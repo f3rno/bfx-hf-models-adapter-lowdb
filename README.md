@@ -8,12 +8,12 @@ const HFDBLowDBAdapter = require('bfx-hf-models-adapter-lowdb')
 const { schema: HFDBBitfinexSchema } = require('bfx-hf-ext-plugin-bitfinex')
 const HFDB = require('bfx-hf-models')
 
-const { LOWDB_FILENAME } = process.env
+const LOWDB_FILENAME = '...'
 
 const db = new HFDB({
   schema: HFDBBitfinexSchema,
   adapter: HFDBLowDBAdapter({
-    dbPath: `${__dirname}/../${LOWDB_FILENAME}`,
+    dbPath: LOWDB_FILENAME,
     schema: HFDBBitfinexSchema,
   }),
 })
