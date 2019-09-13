@@ -1,0 +1,20 @@
+# 1.0.0
+- feature: map method set() now returns value
+- feature: collection method bulkInsert() now returns values
+- manifest: bump deps
+- meta: add github issue/pr templates
+- meta: standardize travis config
+- meta: add placeholder npm test
+- meta: add changelog
+- meta: add example
+
+# 0.1.0
+- feature: add rmAll() method for maps
+- fix: return value from collection upsert() method
+- fix: standard --fix
+
+# 0.0.3
+- feature: add collection upsert() method
+
+# 0.0.2
+- initial version [0.0.1 was tagged early in initial development]
