@@ -34,26 +34,24 @@
   ],
   "dependencies": {
     "binary-search-insert": "^1.0.3",
-    "bluebird": "^3.5.1",
-    "lodash": "^4.17.10",
+    "bluebird": "^3.5.5",
+    "lodash": "^4.17.15",
     "lowdb": "^1.0.0"
   },
   "devDependencies": {
+    "bfx-hf-ext-plugin-dummy": "^1.0.0",
     "babel-eslint": "^8.2.6",
+    "bfx-hf-models": "^2.1.0",
+    "chai": "^4.2.0",
     "dotenv": "^6.0.0",
     "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
     "eslint-config-standard": "^7.0.0",
     "eslint-loader": "^1.7.1",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.0.1",
-    "faucet": "^0.0.1",
     "istanbul": "^0.4.5",
-    "mocha": "^5.2.0",
-    "tape": "^4.6.3",
-    "tape-watch": "^2.3.0",
-    "yargs": "6.6.0"
+    "mocha": "^6.2.0",
+    "standard": "^14.2.0"
   }
 }
