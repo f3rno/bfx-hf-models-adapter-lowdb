@@ -1,3 +1,6 @@
+# 1.0.1
+- docs: create/update
+
 # 1.0.0
 - feature: map method set() now returns value
 - feature: collection method bulkInsert() now returns values

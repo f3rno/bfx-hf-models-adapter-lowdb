@@ -1,6 +1,6 @@
 {
   "name": "bfx-hf-models-adapter-lowdb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "LowDB adapter for the HF database",
   "main": "index.js",
   "directories": {
