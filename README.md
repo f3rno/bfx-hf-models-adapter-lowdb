@@ -38,7 +38,7 @@ console.log(`read ${candles.length} candles`)
 
 ### Docs
 
-Refer to the `examples/` folder for executable examples. For information on the available model methods, check the documentation for [bfx-hf-models](https://github.com/bitfinexcom/bfx-hf-models/tree/master/docs)
+[Refer to the `examples/`](/examples) folder for executable examples. For information on the available model methods, check the documentation for [bfx-hf-models](https://github.com/bitfinexcom/bfx-hf-models/tree/master/docs)
 
 ### Contributing
 
