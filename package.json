@@ -1,8 +1,16 @@
 {
   "name": "bfx-hf-models-adapter-lowdb",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "LowDB adapter for the HF database",
   "main": "index.js",
+  "engines": {
+    "node": ">=8.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
   "directories": {
     "lib": "lib"
   },
@@ -21,9 +29,9 @@
     "url": "https://github.com/f3rno/bfx-hf-models-adapter-lowdb/issues"
   },
   "scripts": {
-    "lint": "standard",
+    "lint": "eslint examples/ test/ lib/ index.js",
     "test": "npm run lint && npm run unit",
-    "unit": "NODE_ENV=test istanbul cover _mocha -- -R spec -b --recursive",
+    "unit": "NODE_ENV=test NODE_PATH=lib/ nyc --check-coverage --lines 90 --branches 60 --functions 90 --statements 90 --reporter=lcov --reporter=html mocha -b --recursive",
     "test-without-coverage": "NODE_ENV=test mocha -R spec -b --recursive"
   },
   "keywords": [
@@ -35,6 +43,7 @@
   "dependencies": {
     "binary-search-insert": "^1.0.3",
     "bluebird": "^3.5.5",
+    "debug": "^4.1.1",
     "lodash": "^4.17.15",
     "lowdb": "^1.0.0"
   },
@@ -47,11 +56,16 @@
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-loader": "^3.0.3",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsdoc": "^22.0.0",
+    "eslint-plugin-lodash": "^6.0.0",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.3",
     "istanbul": "^0.4.5",
     "mocha": "^7.1.0",
+    "nyc": "^15.0.0",
     "standard": "^14.2.0"
   }
 }

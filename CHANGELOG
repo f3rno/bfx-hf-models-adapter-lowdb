@@ -1,3 +1,6 @@
+# 1.0.3
+- meta: update dependencies + eslint config, switch to nyc for coverage
+
 # 1.0.2
 - feature: add bulkUpsert() function for collections
 
