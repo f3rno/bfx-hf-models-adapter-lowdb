@@ -16,7 +16,6 @@ const HFDBLowDBAdapter = require('./lib/index')
  *   {@link module:bfx-hf-algo|bfx-hf-algo}, etc)
  *
  * ### Unique Collection Methods
- * * `upsert()` - insert or update a record by index match
  * * `bulkUpsert()` like `upsert()` but for multiple records
  * * `insertSorted()` - insert a record while maintaing sort (sort configured
  *   per-call)
