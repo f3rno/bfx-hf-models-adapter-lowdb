@@ -1,19 +1,11 @@
 'use strict'
 
-const HFDBLowDBAdapter = require('./lib/index')
+const HFDBLowDBAdapter = require('./lib')
 
 /**
- * This is an adapter around {@npm lowdb} (a lodash-powered JSON database) for
- * the Bitfinex Honey Framework. To use, initialize an instance of the
- * {@link module:bfx-hf-models|bfx-hf-models} database with it as an adapter.
- *
- * ### Features
- * * {@npm lowdb} saves the DB contents as a JSON file on disk
- * * No need to run a 3rd party database server instance
- * * Fully compatible with {@link module:bfx-hf-models|bfx-hf-models} & the HF
- *   system ({@link module:bfx-hf-data-server|bfx-hf-data-server},
- *   {@link module:bfx-hf-algo-server|bfx-hf-algo-server},
- *   {@link module:bfx-hf-algo|bfx-hf-algo}, etc)
+ * This is an adapter around `lowdb` (a lodash-powered JSON database) for the
+ * Bitfinex Honey Framework. To use, initialize an instance of the
+ * {@link external:bfx-hf-models} database with it as an adapter.
  *
  * ### Unique Collection Methods
  * * `bulkUpsert()` like `upsert()` but for multiple records
@@ -26,15 +18,19 @@ const HFDBLowDBAdapter = require('./lib/index')
  * ### Unique Generic Methods
  * * `write()` - flushes all changes to disk
  *
- * ### Installation
+ * @license Apache-2.0
+ * @module bfx-hf-models-adapter-lowdb
+ * @function
+ * @throws {Error} fails if given an invalid or empty `dbPath`
  *
- * ```bash
- * npm i --save bfx-hf-models-adapter-lowdb
- * ```
+ * @param {object} config - configuration
+ * @param {string} config.dbPath - path to `lowdb` JSON store on disk
+ * @param {object} [config.defaultData] - optional seed data if the DB is blank
+ * @param {Function} [config.Backend=FileSync] - lowdb backend, by default
+ *   store is synced to a file on disk at `dbPath`
+ * @returns {bfx-hf-models.DBAdapter} adapter
  *
- * ### Quickstart & Example
- *
- * ```js
+ * @example
  * const HFDBLowDBAdapter = require('bfx-hf-models-adapter-lowdb')
  * const { schema: HFDBBitfinexSchema } = require('bfx-hf-ext-plugin-bitfinex')
  * const HFDB = require('bfx-hf-models')
@@ -53,10 +49,11 @@ const HFDBLowDBAdapter = require('./lib/index')
  * const candles = await Candle.getAll()
  *
  * console.log(`read ${candles.length} candles`)
- * ```
- *
- * @license Apache-2.0
- * @module bfx-hf-models-adapter-lowdb
+ */
+
+/**
+ * @external bfx-hf-models
+ * @see https://github.com/bitfinexcom/bfx-hf-models
  */
 
 module.exports = HFDBLowDBAdapter
